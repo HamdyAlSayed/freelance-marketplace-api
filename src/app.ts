@@ -1,9 +1,11 @@
-import express from "express";
+import express, { Application, Request, Response } from "express";
 
-const app = express();
+const app: Application = express();
 
-app.get("/", (req, res) => {
-    res.send("Gig Board API is running");
+app.use(express.json());
+
+app.get("/health", (req: Request, res: Response) => {
+  res.status(200).json({ status: "OK", message: "Server is healthy" });
 });
 
 export default app;
