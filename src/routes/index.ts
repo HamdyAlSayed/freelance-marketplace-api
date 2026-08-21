@@ -1,7 +1,7 @@
 import { Router } from "express";
 import authRoutes from "./auth.routes";
 import orderRoutes from "./order.routes";
-//import gigRoutes from "./gig.routes";
+import gigRoutes from "./gig.routes";
 
 const router = Router();
 
