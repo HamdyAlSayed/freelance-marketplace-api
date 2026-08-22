@@ -5,13 +5,14 @@ import {
   getGigById,
   updateGig,
   deleteGig,
-} from "../controllers/gig.controller.js";
-import { authMiddleware } from "../middlewares/auth.middleware.js";
-import { authorize } from "../middlewares/authorize.middleware.js";
+} from "../controllers/gig.controller";
+import { authMiddleware } from "../middlewares/auth.middleware";
+import { authorize } from "../middlewares/authorize.middleware";
 
 const protect = authMiddleware;
 const router = Router();
-/
+
+/**
  * @swagger
  * /gigs:
  *   get:
@@ -22,7 +23,7 @@ const router = Router();
  */
 router.get("/", getAllGigs);
 
-/
+/**
  * @swagger
  * /gigs:
  *   post:
@@ -33,7 +34,7 @@ router.get("/", getAllGigs);
  */
 router.post("/", protect, authorize("Freelancer"), createGig);
 
-/
+/**
  * @swagger
  * /gigs/{id}:
  *   get:
@@ -50,7 +51,7 @@ router.post("/", protect, authorize("Freelancer"), createGig);
  */
 router.get("/:id", getGigById);
 
-/
+/**
  * @swagger
  * /gigs/{id}:
  *   put:
