@@ -6,8 +6,10 @@ import {
   updateGig,
   deleteGig,
 } from "../controllers/gig.controller.js";
-import { protect, authorize } from "../middleware/auth.middleware.js";
+import { authMiddleware } from "../middlewares/auth.middleware.js";
+import { authorize } from "../middlewares/authorize.middleware.js";
 
+const protect = authMiddleware;
 const router = Router();
 
 /**
