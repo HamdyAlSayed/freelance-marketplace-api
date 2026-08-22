@@ -1,18 +1,25 @@
 # Freelance Marketplace API
 
-A RESTful API built with Node.js, Express, TypeScript, and MongoDB for a Freelance Marketplace platform.
+A RESTful API built with Node.js, Express, TypeScript, and MongoDB.
+
+## 🔗 Deployed Project Links
+- **Live Server:** https://your-deployed-app.onrender.com
+- **Swagger Documentation:** https://your-deployed-app.onrender.com/api-docs
 
 ## 🚀 Features & Infrastructure
-- **TypeScript**: Static typing and modern ES features.
-- **Database**: MongoDB integration via Mongoose ODM.
-- **Environment Management**: Centralized `dotenv` config.
-- **Error Handling**: Global centralized error handling middleware.
-- **API Documentation**: Interactive Swagger UI at `/api-docs`.
-- **Shared Middlewares**: Authentication, Authorization (RBAC), and Input Validation.
+- TypeScript Support
+- MongoDB Atlas Integration
+- JWT Authentication & Authorization
+- Input Validation Middleware
+- Swagger API Documentation
 
-## 🛠️ Setup & Installation
+## ⚙️ How to Run Locally
 
-1. **Clone the repository:**
-   ```bash
+1. Clone the project:
    git clone <repository-url>
-   cd freelance-marketplace-api
+
+2. Install dependencies:
+   npm install
+
+3. Run the development server:
+   npm run dev
