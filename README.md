@@ -2,10 +2,10 @@
 
 A RESTful API built with Node.js, Express, TypeScript, and MongoDB.
 
-## 🔗 Live API Link
+## 🔗 Live Deployment
 
 - **Base URL:** `https://freelance-marketplace-api-l2xf-wine.vercel.app`
-- **Swagger Docs:** `https://freelance-marketplace-api-l2xf-wine.vercel.app/api-docs`
+- **Swagger Documentation:** `https://freelance-marketplace-api-l2xf-wine.vercel.app/api-docs`
 
 ## 🚀 Features & Infrastructure
 - TypeScript & Node.js
