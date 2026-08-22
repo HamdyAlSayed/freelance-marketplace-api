@@ -14,6 +14,6 @@ router.get("/", (req, res) => {
 
 router.use("/auth", authRoutes);
 router.use("/orders", orderRoutes);
-// router.use("/gigs", gigRoutes);
+router.use("/gigs", gigRoutes);
 
 export default router;
