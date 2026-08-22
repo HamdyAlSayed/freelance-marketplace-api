@@ -8,13 +8,15 @@ const app: Application = express();
 
 app.use(express.json());
 
-const CSS_URL = "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.15.5/swagger-ui.min.css";
+const customOptions = {
+  customCssUrl: "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.15.5/swagger-ui.min.css",
+  customJs: [
+    "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.15.5/swagger-ui-bundle.min.js",
+    "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.15.5/swagger-ui-standalone-preset.min.js",
+  ],
+};
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec, customOptions));
 
-app.use(
-  "/api-docs",
-  swaggerUi.serve,
-  swaggerUi.setup(swaggerSpec, { customCssUrl: CSS_URL })
-);
 app.use("/api/v1", mainRouter);
 
 app.get("/health", (req: Request, res: Response) => {
