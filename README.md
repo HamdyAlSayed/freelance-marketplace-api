@@ -2,24 +2,18 @@
 
 A RESTful API built with Node.js, Express, TypeScript, and MongoDB.
 
-## 🔗 Deployed Project Links
-- **Live Server:** https://your-deployed-app.onrender.com
-- **Swagger Documentation:** https://your-deployed-app.onrender.com/api-docs
+## 🔗 Live Demo & Deployment
+- **Live Server:** Pending deployment (Will be updated once models are completed)
+- **Swagger Documentation:** `/api-docs` (Available locally and post-deployment)
 
 ## 🚀 Features & Infrastructure
-- TypeScript Support
-- MongoDB Atlas Integration
-- JWT Authentication & Authorization
-- Input Validation Middleware
-- Swagger API Documentation
+- TypeScript & Node.js
+- MongoDB Atlas with Mongoose
+- Express REST API Architecture
+- Swagger Interactive Documentation
 
 ## ⚙️ How to Run Locally
 
-1. Clone the project:
+1. Clone the repository:
+   ```bash
    git clone <repository-url>
-
-2. Install dependencies:
-   npm install
-
-3. Run the development server:
-   npm run dev
