@@ -131,7 +131,7 @@ export const deleteGig = async (
       return;
     }
 
-    if (gig.owner !== req.user?.id) {
+    if (gig.owner.toString !== req.user?.id) {
       res.status(403).json({ message: "Not authorized to delete this gig." });
       return;
     }
