@@ -2,14 +2,11 @@ import app from "./app";
 import { config } from "./config/env";
 import { connectDB } from "./config/db";
 
-const startServer = async () => {
-  await connectDB();
+connectDB().catch((err) => console.error("Database connection error:", err));
 
-  app.listen(config.port, () => {
-    console.log(`Server is running on port ${config.port}`);
-  });
-};
-
-startServer();
+app.listen(config.port, () => {
+  console.log(`Server running on http://localhost:${config.port}`);
+  console.log(`Swagger docs: http://localhost:${config.port}/api-docs`);
+});
 
 export default app;
