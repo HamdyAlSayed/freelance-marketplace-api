@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import { Gig } from "../models/gig.model.js";
 import { User } from "../models/user.model.js";
-import { Order } from "../models/order.model.js";
+import { Order } from "../models/order.model";
 
 
 
@@ -54,9 +54,11 @@ if (freelancerName) {
     fullName: { $regex: freelancerName as string, $options: "i" },
   }).select("_id");
 
-  filter.owner = {
-    $in: matchingOwners.map((user) => user._id.toString()),
-  };
+    filter.owner = {
+      $in: matchingOwners.map((user: { _id: { toString: () => string } }) =>
+        user._id.toString()
+      ),
+    };
 }
 
     const gigs = await Gig.find(filter);
